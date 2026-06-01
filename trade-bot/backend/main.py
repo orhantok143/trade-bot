@@ -132,9 +132,6 @@ async def analyze_all_coins():
         print(f"Analiz hatası: {e}")
 
 
-print(f"✅ Otomatik pozisyon açıldı: {symbol}")
-
-
 async def check_positions_and_exit():
     for position in wallet.positions[:]:
         results = cached_results.get('results', [])
