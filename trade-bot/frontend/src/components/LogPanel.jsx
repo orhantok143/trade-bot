@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { API_URL } from '../config';
 
 function LogPanel() {
   const [activeLogTab, setActiveLogTab] = useState('signals') // signals | trades | backtest
