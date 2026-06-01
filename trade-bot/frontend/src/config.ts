@@ -1,0 +1,1 @@
+export const API_URL = 'https://trade-bot-production-7ac0.up.railway.app'

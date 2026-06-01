@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react'
 import Dashboard from './components/Dashboard'
 import CoinDetail from './components/CoinDetail'
 import WalletPanel from './components/WalletPanel'
-import LogPanel from './components/LogPanel'
+import LogPanel from './components/Log Panel'
+import API_URL from './config'
 
 function App() {
   const [selectedCoin, setSelectedCoin] = useState(null)
@@ -21,8 +22,8 @@ function App() {
   const fetchAllData = async () => {
     try {
       const [signalsRes, walletRes] = await Promise.all([
-        fetch('/api/signals'),
-        fetch('/api/wallet')
+        fetch(`${API_URL}/api/signals`),
+        fetch(`${API_URL}/api/wallet`)
       ])
       
       const signalsData = await signalsRes.json()

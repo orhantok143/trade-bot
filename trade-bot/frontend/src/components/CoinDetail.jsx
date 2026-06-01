@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import TimeframeBar from './TimeframeBar'
+import API_URL from '../config'
 
 function CoinDetail({ symbol, onBack }) {
   const [data, setData] = useState(null)
@@ -11,7 +12,7 @@ function CoinDetail({ symbol, onBack }) {
 
   const fetchDetail = async () => {
     try {
-      const response = await fetch(`/api/signal/${symbol}`)
+      const response = await fetch(`${API_URL}/api/signal/${symbol}`)
       const result = await response.json()
       setData(result)
       setLoading(false)
