@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react'
 import Dashboard from './components/Dashboard'
 import CoinDetail from './components/CoinDetail'
 import WalletPanel from './components/WalletPanel'
-import LogPanel from './components/Log Panel'
 import API_URL from './config'
+import LogPanel from './components/LogPanel';
 
 function App() {
   const [selectedCoin, setSelectedCoin] = useState(null)
