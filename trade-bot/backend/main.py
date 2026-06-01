@@ -90,6 +90,27 @@ async def analyze_all_coins():
                     'signal': 'ERROR'
                 })
         
+        # >>> OTOMATİK POZİSYON AÇ - try BLOĞU İÇİNDE <<<
+        for result in results:
+            if result.get('signal') == 'ENTER':
+                symbol = result['symbol']
+                price = result.get('price', 0)
+                
+                position = wallet.open_position(symbol, result, price)
+                
+                if position:
+                    logger.log_position_open({
+                        'id': position.id,
+                        'symbol': position.symbol,
+                        'type': str(position.type),
+                        'entry_price': position.entry_price,
+                        'capital': position.capital,
+                        'leverage': position.leverage,
+                        'quantity': position.quantity,
+                        'stop_loss': position.stop_loss,
+                        'total_score': position.total_score
+                    })
+        
         signal_order = {'ENTER': 0, 'WAIT': 1, 'NONE': 2, 'ERROR': 3}
         results.sort(key=lambda x: signal_order.get(x.get('signal', 'ERROR'), 3))
         
@@ -110,28 +131,8 @@ async def analyze_all_coins():
     except Exception as e:
         print(f"Analiz hatası: {e}")
 
-     # >>> ENTER sinyalleri için otomatik pozisyon aç <<<
-    for result in results:
-        if result.get('signal') == 'ENTER':
-            symbol = result['symbol']
-            price = result['price']
-            
-            # Pozisyon açmayı dene
-            position = wallet.open_position(symbol, result, price)
-            
-            if position:
-                logger.log_position_open({
-                    'id': position.id,
-                    'symbol': position.symbol,
-                    'type': str(position.type),
-                    'entry_price': position.entry_price,
-                    'capital': position.capital,
-                    'leverage': position.leverage,
-                    'quantity': position.quantity,
-                    'stop_loss': position.stop_loss,
-                    'total_score': position.total_score
-})
-                print(f"✅ Otomatik pozisyon açıldı: {symbol}")
+
+print(f"✅ Otomatik pozisyon açıldı: {symbol}")
 
 
 async def check_positions_and_exit():
