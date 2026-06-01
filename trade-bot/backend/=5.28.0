@@ -1,0 +1,35 @@
+Defaulting to user installation because normal site-packages is not writeable
+Collecting keras
+  Downloading keras-3.12.2-py3-none-any.whl.metadata (5.9 kB)
+Collecting ml-dtypes
+  Downloading ml_dtypes-0.5.4-cp310-cp310-win_amd64.whl.metadata (9.2 kB)
+Collecting protobuf
+  Downloading protobuf-7.35.0-cp310-abi3-win_amd64.whl.metadata (595 bytes)
+Collecting tensorboard~=2.20.0
+  Using cached tensorboard-2.20.0-py3-none-any.whl.metadata (1.8 kB)
+Requirement already satisfied: absl-py>=0.4 in c:\users\casper\appdata\roaming\python\python310\site-packages (from tensorboard~=2.20.0) (2.2.2)
+Requirement already satisfied: grpcio>=1.48.2 in c:\users\casper\appdata\roaming\python\python310\site-packages (from tensorboard~=2.20.0) (1.71.0)
+Requirement already satisfied: markdown>=2.6.8 in c:\users\casper\appdata\roaming\python\python310\site-packages (from tensorboard~=2.20.0) (3.8)
+Requirement already satisfied: numpy>=1.12.0 in c:\users\casper\appdata\roaming\python\python310\site-packages (from tensorboard~=2.20.0) (1.26.2)
+Requirement already satisfied: packaging in c:\users\casper\appdata\roaming\python\python310\site-packages (from tensorboard~=2.20.0) (25.0)
+Requirement already satisfied: pillow in c:\users\casper\appdata\roaming\python\python310\site-packages (from tensorboard~=2.20.0) (11.2.1)
+Requirement already satisfied: setuptools>=41.0.0 in c:\program files\python310\lib\site-packages (from tensorboard~=2.20.0) (65.5.0)
+Requirement already satisfied: tensorboard-data-server<0.8.0,>=0.7.0 in c:\users\casper\appdata\roaming\python\python310\site-packages (from tensorboard~=2.20.0) (0.7.2)
+Requirement already satisfied: werkzeug>=1.0.1 in c:\users\casper\appdata\roaming\python\python310\site-packages (from tensorboard~=2.20.0) (3.1.3)
+Requirement already satisfied: rich in c:\users\casper\appdata\roaming\python\python310\site-packages (from keras) (14.0.0)
+Requirement already satisfied: namex in c:\users\casper\appdata\roaming\python\python310\site-packages (from keras) (0.0.8)
+Requirement already satisfied: h5py in c:\users\casper\appdata\roaming\python\python310\site-packages (from keras) (3.13.0)
+Requirement already satisfied: optree in c:\users\casper\appdata\roaming\python\python310\site-packages (from keras) (0.15.0)
+Requirement already satisfied: MarkupSafe>=2.1.1 in c:\users\casper\appdata\roaming\python\python310\site-packages (from werkzeug>=1.0.1->tensorboard~=2.20.0) (3.0.2)
+Requirement already satisfied: typing-extensions>=4.5.0 in c:\users\casper\appdata\roaming\python\python310\site-packages (from optree->keras) (4.15.0)
+Requirement already satisfied: markdown-it-py>=2.2.0 in c:\users\casper\appdata\roaming\python\python310\site-packages (from rich->keras) (3.0.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in c:\users\casper\appdata\roaming\python\python310\site-packages (from rich->keras) (2.19.1)
+Requirement already satisfied: mdurl~=0.1 in c:\users\casper\appdata\roaming\python\python310\site-packages (from markdown-it-py>=2.2.0->rich->keras) (0.1.2)
+Using cached tensorboard-2.20.0-py3-none-any.whl (5.5 MB)
+Downloading keras-3.12.2-py3-none-any.whl (1.5 MB)
+   ---------------------------------------- 1.5/1.5 MB 1.8 MB/s  0:00:01
+Downloading ml_dtypes-0.5.4-cp310-cp310-win_amd64.whl (210 kB)
+Downloading protobuf-7.35.0-cp310-abi3-win_amd64.whl (439 kB)
+Installing collected packages: protobuf, ml-dtypes, tensorboard, keras
+
+Successfully installed keras-3.12.2 ml-dtypes-0.5.4 protobuf-7.35.0 tensorboard-2.20.0
