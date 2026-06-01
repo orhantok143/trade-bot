@@ -11,7 +11,7 @@ function CoinDetail({ symbol, onBack }) {
 
   const fetchDetail = async () => {
     try {
-      const response = await fetch(`http://localhost:8000/api/signal/${symbol}`)
+      const response = await fetch(`/api/signal/${symbol}`)
       const result = await response.json()
       setData(result)
       setLoading(false)
