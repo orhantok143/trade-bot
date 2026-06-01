@@ -123,14 +123,14 @@ async def analyze_all_coins():
                 logger.log_position_open({
                     'id': position.id,
                     'symbol': position.symbol,
-                    'type': position.type,
+                    'type': str(position.type),
                     'entry_price': position.entry_price,
                     'capital': position.capital,
                     'leverage': position.leverage,
                     'quantity': position.quantity,
                     'stop_loss': position.stop_loss,
                     'total_score': position.total_score
-                })
+})
                 print(f"✅ Otomatik pozisyon açıldı: {symbol}")
 
 
