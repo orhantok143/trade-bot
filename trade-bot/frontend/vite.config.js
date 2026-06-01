@@ -7,7 +7,7 @@ export default defineConfig({
     port: 3000,
     proxy: {
       '/api': {
-        target: 'https://trade-bot-zkyv.onrender.com',
+        target: 'trade-bot-production-7ac0.up.railway.app',
         changeOrigin: true
       }
     }
