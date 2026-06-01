@@ -10,7 +10,7 @@ function WalletPanel({ wallet: initialWallet }) {
   useEffect(() => {
     const interval = setInterval(async () => {
       try {
-        const res = await fetch(`${API_URL}/api/wallet/`)
+        const res = await fetch(API_URL + '/api/wallet')
         const data = await res.json()
         setWallet(data)
       } catch (e) {

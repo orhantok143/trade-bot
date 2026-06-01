@@ -17,15 +17,15 @@ function LogPanel() {
   const fetchLogs = async () => {
     try {
       if (activeLogTab === 'signals') {
-        const res = await fetch(`${API_URL}/api/logs/signals?limit=50`)
+        const res = await fetch(API_URL + '/api/logs/signals?limit=50')
         const data = await res.json()
         setSignals(data.signals || [])
       } else if (activeLogTab === 'trades') {
-        const res = await fetch(`${API_URL}/api/logs/trades?limit=50`)
+        const res = await fetch(API_URL + '/api/logs/trades?limit=50')
         const data = await res.json()
         setTrades(data.trades || [])
       } else if (activeLogTab === 'backtest') {
-        const res = await fetch(`${API_URL}/api/logs/backtest?limit=100`)
+        const res = await fetch(API_URL + '/api/logs/backtest?limit=100')
         const data = await res.json()
         setBacktest(data.logs || [])
       }

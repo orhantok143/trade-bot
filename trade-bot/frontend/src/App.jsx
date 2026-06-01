@@ -22,8 +22,8 @@ function App() {
   const fetchAllData = async () => {
     try {
       const [signalsRes, walletRes] = await Promise.all([
-        fetch(`${API_URL}/api/signals`),
-        fetch(`${API_URL}/api/wallet`)
+        fetch(API_URL + '/api/signals'),
+        fetch(API_URL + '/api/wallet')
       ])
       
       const signalsData = await signalsRes.json()
