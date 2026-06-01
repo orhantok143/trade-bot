@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import TimeframeBar from './TimeframeBar'
-import API_URL from '../config'
+import { API_URL } from '../config';
 
 function CoinDetail({ symbol, onBack }) {
   const [data, setData] = useState(null)
